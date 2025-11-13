@@ -1,0 +1,360 @@
+/* --- Global Styles --- */
+body {
+    font-family: 'Merriweather Sans', sans-serif; /* Single font family everywhere */
+    font-weight: 400; /* Regular weight for body text */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; 
+    color: #333;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-weight: 800; /* Extra-Bold for major titles */
+    color: #001f3f; 
+}
+
+a {
+    color: #007bff; /* A bright blue for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: #001f3f; /* Navy Blue */
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav a {
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+nav a:hover {
+    background-color: #004a99; /* A slightly lighter navy */
+    text-decoration: none;
+}
+
+nav a.active {
+    background-color: #ADD8E6; /* Light Blue */
+    color: #001f3f; /* Navy text */
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    background-color: #333;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* --- Page 1: Articles & Word Cloud --- */
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.article-box {
+    display: block;
+    background-color: #F0F8FF; /* Alice Blue (a very light blue) */
+    border: 1px solid #ADD8E6; /* Light Blue */
+    border-left: 5px solid #001f3f; /* Navy */
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* --- Page 1: Articles & Word Cloud --- */
+/* ... existing styles ... */
+
+.article-box img {
+    max-width: 100%; /* Ensures images don't overflow their container */
+    height: auto;    /* Maintains aspect ratio */
+    display: block;  /* Removes extra space below the image */
+    margin-bottom: 1rem; /* Space between image and title */
+    border-radius: 4px; /* Slightly rounded corners for images */
+}
+
+/* ... rest of your styles ... */
+.article-box:hover {
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+    text-decoration: none;
+}
+
+.article-box h3 {
+    margin-top: 0;
+    color: #001f3f; /* Navy */
+}
+
+.word-cloud-section {
+    text-align: center;
+    padding: 1rem;
+    background-color: #F0F8FF; /* Alice Blue */
+    border-radius: 8px;
+    border: 1px solid #ADD8E6;
+}
+
+#word-cloud-container {
+    max-width: 100%;
+}
+
+/* --- Page 3: Threats & Opportunities --- */
+.columns-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows columns to stack on small screens */
+    gap: 2rem;
+}
+
+.column {
+    flex: 1; /* Each column takes up equal space */
+    min-width: 300px; /* Ensures columns don't get too narrow */
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.column:first-child {
+    background-color: #fff0f0; /* Light red for threats */
+    border: 1px solid #ffc0c0;
+}
+
+.column:last-child {
+    background-color: #f0fff0; /* Light green for opportunities */
+    border: 1px solid #c0ffc0;
+}
+
+.column h3 {
+    margin-top: 0;
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+    padding-bottom: 0.5rem;
+}
+
+.column:first-child h3 {
+    color: #d00000; /* Dark red text */
+}
+
+.column:last-child h3 {
+    color: #008000; /* Dark green text */
+}
+
+.column ul {
+    padding-left: 20px;
+}
+
+.column li {
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+}
+/* --- Page 3: Accordion Styles --- */
+
+.accordion {
+    width: 100%;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #ADD8E6; /* Light Blue */
+}
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-header {
+    width: 100%;
+    background-color: #F0F8FF; /* Alice Blue */
+    border: none;
+    padding: 1rem 1.5rem;
+font-family: 'Merriweather Sans', sans-serif;
+    font-weight: 600; /* Semi-Bold for interactive titles */
+    font-size: 1.25rem;
+    color: #001f3f; /* Navy */
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+
+.accordion-header:hover {
+    background-color: #E0F0FF; /* A slightly darker light blue */
+}
+
+.accordion-header .arrow {
+    /* 1. Create the circle */
+    width: 28px;  /* Circle size */
+    height: 28px; /* Circle size */
+    background-color: #E0F0FF; /* Lighter blue */
+    border: 1px solid #ADD8E6; /* Light blue border */
+    border-radius: 50%; /* Makes it a circle */
+
+    /* 2. Center the arrow shape we will draw */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* 3. Set up the rotation animation */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* This pseudo-element creates the wider arrow shape */
+.accordion-header .arrow::after {
+    content: '';
+    /* --- THE CRITICAL FIX IS HERE --- */
+    display: block; 
+    /* ---------------------------------- */
+
+    width: 8px;  
+    height: 8px; 
+    
+    /* Create the chevron shape using borders */
+    border-right: 3px solid #001f3f; /* Navy */
+    border-bottom: 3px solid #001f3f; /* Navy */
+    
+    /* Rotate the chevron to point right */
+    transform: rotate(-45deg);
+    
+    /* Nudge it slightly to be perfectly centered (optional, but looks better) */
+    margin-right: 1px; 
+}
+
+/* This rule rotates the entire circle (and the arrow inside) when active */
+/* ADD THIS NEW BLOCK: */
+.accordion-summary {
+    padding: 0 1.5rem 1rem 1.5rem; /* Padding for the summary text */
+    background-color: #ffffff; /* White background */
+    border-left: 5px solid #ADD8E6; /* Light Blue indicator */
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+/* MODIFY EXISTING ACCORDION STYLES: */
+/* Find the .accordion-content block and change the background-color */
+
+.accordion-content {
+    /* This is how we hide/show the content */
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 1.5rem;
+    background-color: #F0F8FF; /* Alice Blue background for the links */
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+.accordion-item.active .accordion-content {
+    /* Set max-height by JS, but add top/bottom padding when active */
+    padding: 1.5rem; 
+}
+
+.accordion-content h3 {
+    margin-top: 0;
+    border-bottom: 1px dashed #ADD8E6;
+    padding-bottom: 0.5rem;
+    color: #004a99; /* Darker blue for article heading */
+}
+
+.accordion-content ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.accordion-content li {
+    margin-bottom: 0.75rem;
+}
+.accordion-item.active .arrow {
+    transform: rotate(90deg);
+}
+
+.accordion-content {
+    /* This is how we hide/show the content */
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 1.5rem; /* No top/bottom padding when collapsed */
+    background-color: #ffffff;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+.accordion-item.active .accordion-content {
+    /* When active, we reveal it. 
+       max-height is set by JS, but padding is added */
+    padding: 1.5rem;
+}
+
+/* Make the columns inside the accordion look right */
+.accordion-content .columns-container {
+    gap: 1.5rem; /* A little less gap for inside the accordion */
+    margin-top: 0;
+}
+
+/* --- Styling for Focus Groups on Threats Page --- */
+.focus-group {
+    margin-bottom: 3rem; /* Space between the full focus sections */
+    padding: 1rem 0;
+    border-top: 1px solid #ADD8E6; /* Light Blue separator line */
+}
+
+.focus-group:first-child {
+    border-top: none; /* No line above the first group */
+}
+
+.focus-group h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: #004a99; /* Darker navy for the group title */
+}
+
+.column h4 { /* Styling for the "Threats" and "Opportunities" sub-headings */
+    font-size: 1.2rem;
+    color: #333;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 0.5rem;
+}
+/* Styling for the new static word cloud image */
+.static-wordcloud-image {
+    max-width: 100%; /* Ensures the image doesn't overflow its container */
+    height: auto;    /* Maintains the image aspect ratio */
+    display: block;
+    margin: 0 auto;  /* Centers the image on the page */
+}
+
+/* You can remove the canvas styling if it exists, but usually harmless */
+#word-cloud-container {
+    /* You can delete or comment out this block if it exists */
+}
